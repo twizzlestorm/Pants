@@ -1,0 +1,20 @@
+{
+  "name": "Pants",
+  "description": "the Anti-YouTube Shorts extension, by ethan.is",
+  "version": "1.0",
+  "manifest_version": 2,
+  "icons": {
+	"16": "/img/icon.png",
+	"48": "/img/icon.png",
+	"128": "/img/icon.png"
+  },
+  "browser_action": {
+	"default_title": "Pants",
+	"default_popup": "pants.html"
+  },
+  "content_scripts": [{
+    "matches": ["<all_urls>"],
+	"js": ["src/script.js"],
+	"run_at": "document_start"
+  }]
+}
